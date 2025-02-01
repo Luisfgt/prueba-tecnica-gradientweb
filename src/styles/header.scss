@@ -9,6 +9,35 @@ $global-padding-inline: 280px;
 $global-border-radius: 5px;
 
 
+@mixin bodyLogos {
+    display: flex;
+    height: 3rem;
+    width: fit-content;
+    gap: 8px;
+    align-items: center;
+}
+
+@mixin logoCrypto {
+    height: 26px;
+    width: 26px;
+    max-height: 26px;
+    max-width: 26px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+@mixin bodyLinks {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header {
     display: flex;
     position: fixed;
@@ -64,31 +93,15 @@ $global-border-radius: 5px;
         }
 
         .header_midContainer_logos {
-            display: flex;
-            height: 3rem;
-            width: fit-content;
-            gap: 8px;
-            align-items: center;
+            @include bodyLogos();
         }
 
         .header_midContainer_logo {
-            height: 26px;
-            width: 26px;
-            max-height: 26px;
-            max-width: 26px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-
-            &:hover {
-                transform: scale(1.1);
-            }
+            @include logoCrypto();
         }
+
         .header_midContainer_link {
-            height: fit-content;
-            width: fit-content;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include bodyLinks();
         }
 
     }

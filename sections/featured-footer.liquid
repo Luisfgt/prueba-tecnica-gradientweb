@@ -33,15 +33,32 @@
             <p class="featured-footer-container-two-crypto-links-paragraph">
                 We accept all major cards, Paypal & crypto
             </p>
-            <div class="featured-footer-container-two-crypto-links-logos">logos cryptos</div>
+            <div class="featured-footer-container-two-crypto-links-logos">
+                {% for store in stores %}
+                    <a href="{{store.coinPage}}" target="_blank" class="featured-footer-container-two-crypto-link">
+                        <img src="{{ store.image }}" height="auto" width="auto" alt="Logo" class="featured-footer-container-two-crypto-logo">
+                    </a>
+                {% endfor %}
+            </div>
         </div>
     </div>
     <div class="featured-footer-container-three">
         <div class="featured-footer-container-three-container">
             <p class="featured-footer-container-three-container-paragraph">Suscribe and receive drop notifications</p>
+            <div class="featured-footer-container-three-input-container">
+                <input placeholder="Enter Email" type="text" name="" id="" class="featured-footer-container-three-input">
+                <button class="featured-footer-container-three-button">
+                    {% assign arrow_icon = settings.footer.settings.arrow_icon %}
+                    <img src="/assets/SVG/{{ arrow_icon }}" height="16px" width="auto" alt="Logo" class="featured-footer-container-three-button-icon">
+                </button> 
+            </div>
         </div>
         <div class="featured-footer-container-three-rrss">
-            links de redes
+            {% for link in links %}
+                {% if link.type == 'rrss' %}
+                    <a href="{{link.url}}" class="featured-footer-container-three-rrss-link">{{link.label | upcase}}</a>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </section>
