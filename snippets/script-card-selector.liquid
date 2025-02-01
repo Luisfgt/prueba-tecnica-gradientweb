@@ -1,0 +1,31 @@
+<script>
+class CardScripts {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        const cards = document.querySelectorAll('.product-card');
+        
+        cards.forEach(card => {
+            const imageContainer = card.querySelector('.product-card_imageContainer');
+            const title = card.querySelector('.product-card_info_and_button_info_container_title_one');
+            const title2 = card.querySelector('.product-card_info_and_button_info_container_title_two');
+
+            imageContainer.addEventListener('mouseenter', () => {
+                title.classList.add('hoverCard');
+                title2.classList.add('hoverCard2');
+            });
+            
+            imageContainer.addEventListener('mouseleave', () => {
+                title.classList.remove('hoverCard');
+                title2.classList.remove('hoverCard2');
+            });
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    new CardScripts();
+});
+</script>

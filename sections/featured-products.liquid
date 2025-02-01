@@ -1,8 +1,9 @@
 <section id="products" class="featured-products">
   <h2>{{ settings['featured-products'].settings.heading }}</h2>
+  {% assign cart_logo = settings.header.settings.cart %}
   <div class="product-list">
     {% for product in products %}
-      {% render 'product-card', product: product %}
+      {% render 'product-card', product: product, cart_logo: cart_logo %}
     {% endfor %}
   </div>
 </section>

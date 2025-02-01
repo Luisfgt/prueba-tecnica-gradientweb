@@ -23,7 +23,7 @@
         <a class="header_linksAndCart_links">All Products</a>
         <a class="header_linksAndCart_links">Collections</a>
         <div class="header_linksAndCart_logoContainer">
-            <img src="/assets/SVG/{{cart_logo}}"  height="22" width="auto" alt="Logo" class="header_linksAndCart_logoContainer_logoCart">
+            {% render 'icon-cart-logo', cart_logo: cart_logo %}
         </div>
     </section>
 </header>

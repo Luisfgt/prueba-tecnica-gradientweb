@@ -1,11 +1,29 @@
 <div class="product-card">
-  <h3>{{ product.title }}</h3>
-  <p>Price: ${{ product.price }}</p>
-  {% if product.tags %}
-    <ul>
-      {% for tag in product.tags %}
-        <li>{{ tag }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+  <div id="card-selector" class="product-card_imageContainer">
+    {% assign cart_logo = cart_logo %}
+    <img src="/assets/{{product.image}}" alt="" width="auto" height="auto" class="product-card_imageContainer_image">
+  </div>
+  <div class="product-card_info_and_button">
+    <div class="product-card_info_and_button_info">
+      <div class="product-card_info_and_button_info_container">
+        <p class="product-card_info_and_button_info_container_title_one">{{ product.title }}</p>
+        <p class="product-card_info_and_button_info_container_title_two">
+          {% if product.tags %}
+            {% if product.tags.size > 1 %}
+                {% for tag in product.tags %}
+                    {{ tag | capitalize }}{% unless forloop.last %} - {% endunless %}
+                {% endfor %}
+            {% else %}
+                {{ product.tags.first | capitalize }}
+            {% endif %}
+        {% endif %}
+        </p>
+      </div>
+      <p class="product-card_info_and_button_info_title">$ {{ product.price | money }} USD</p>
+    </div>
+    <button class="product-card_info_and_button_button">
+      {% render 'icon-cart-logo', cart_logo: cart_logo %}
+    </button>
+  </div>
 </div>
+
