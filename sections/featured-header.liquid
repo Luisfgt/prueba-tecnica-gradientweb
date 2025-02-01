@@ -1,0 +1,29 @@
+<header class="header">
+    <section class="header_logoContainer">
+        {%  assign header_store_logo = settings.header.settings.store_logo_url %} 
+        {%  assign header_shuffle_logo = settings.header.settings.shuffle_logo_url %} 
+        <img src="/assets/SVG/{{ header_shuffle_logo }}" height="auto" width="180" alt="Logo" class="header_logoContainer_logo1">
+        <div class="header_divisorLine"></div>
+        <img src="/assets/SVG/{{header_store_logo}}"  height="22" width="auto" alt="Logo" class="header_logoContainer_logo2">
+    </section>
+    <section class="header_midContainer">
+        <div class="header_midContainer_logos">
+            <div class="header_midContainer_logos">
+                <h1 class="header_midContainer_title">We Accept.</h1>
+                {% for store in stores %}
+                    <a href="{{store.coinPage}}" target="_blank" class="header_midContainer_link">
+                        <img src="{{ store.image }}" height="auto" width="auto" alt="Logo" class="header_midContainer_logo">
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="header_linksAndCart">
+        {% assign cart_logo = settings.header.settings.cart %}
+        <a class="header_linksAndCart_links">All Products</a>
+        <a class="header_linksAndCart_links">Collections</a>
+        <div class="header_linksAndCart_logoContainer">
+            <img src="/assets/SVG/{{cart_logo}}"  height="22" width="auto" alt="Logo" class="header_linksAndCart_logoContainer_logoCart">
+        </div>
+    </section>
+</header>

@@ -1,0 +1,124 @@
+$primary-color: #6B26FA;
+$hover-primary-color: #874bff;
+$text-color: white;
+$border-color: linear-gradient(90deg, #2F1E59 0%, #4F4775 48%, #37315F 100%) border-box;
+$background-color: linear-gradient(#151515, #151515) padding-box;
+$header-text-size: 10.5px;
+$header-links-text-size: 14px;
+$global-padding-inline: 278px;
+
+
+.header {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: screen;
+    max-width: screen;
+    padding-inline: $global-padding-inline ;
+    height: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    &.scrolled {
+        background: rgba(17, 17, 17, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .header_logoContainer {
+        max-width: 279px;
+        width: 279px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .header_divisorLine {
+        height: 22px;
+        width: 1px;
+        background: $primary-color;
+    }
+
+    .header_midContainer {
+        display: flex;
+        max-width: 261px;
+        justify-content: center;
+        width: 261px;
+        align-items: center;
+        border-radius: 5rem;
+        height: 45px;
+        max-height: 45px;
+        background:
+            $background-color,
+            $border-color;
+        border: 1px solid transparent;
+
+        .header_midContainer_title {
+            font-size: $header-text-size;
+            color: $text-color;
+        }
+
+        .header_midContainer_logos {
+            display: flex;
+            height: 3rem;
+            width: fit-content;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .header_midContainer_logo {
+            height: 26px;
+            width: 26px;
+            max-height: 26px;
+            max-width: 26px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        .header_midContainer_link {
+            height: fit-content;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+    .header_linksAndCart {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 12px;
+        max-width: 280px;
+        width: 280px;
+        min-width: 280px;
+
+        .header_linksAndCart_links {
+            font-size: $header-links-text-size;
+        }
+
+        .header_linksAndCart_logoContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 42px;
+            background: $primary-color;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: $hover-primary-color;
+            }
+        }
+    }
+}

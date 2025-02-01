@@ -1,0 +1,9 @@
+<div class="marquee-hero-banner">
+    <div class="marquee-hero-banner-container">
+        {% assign star_icon = settings['hero-banner'].settings.star-icon-V2 %}
+        {% assign text_marquee = settings['hero-banner'].settings.marquee_text %}
+        {% for i in (1..50) %}
+            {% render 'text-and-logo', text:text_marquee, logo:star_icon, class:"marquee-hero-banner-container" %}
+        {% endfor %}
+    </div>
+</div>

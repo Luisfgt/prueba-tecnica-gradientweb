@@ -1,0 +1,41 @@
+<script>
+    class HeaderScroll {
+        constructor() {
+            this.header = document.querySelector('.header');
+            this.scrollActiveSticky = 50;
+            this.initFunctions();
+        }
+
+        initFunctions() {
+            window.addEventListener('scroll', () => this.handleScroll());
+            
+            document.querySelectorAll('.header_linksAndCart_links').forEach(link => {
+                link.addEventListener('click', (e) => this.handleLinkClick(e));
+            });
+        }
+
+        handleScroll() {
+            
+            if(window.scrollY > this.scrollActiveSticky) {
+                this.header.classList.add('scrolled');
+            } else {
+                this.header.classList.remove('scrolled');
+            }
+        }
+
+        handleLinkClick(e) {
+            const linkText = e.target.textContent;
+            
+            if(linkText === 'All Products') {
+                document.querySelector('#products')?.scrollIntoView({ behavior: 'smooth' });
+            }
+            if(linkText === 'Collections') {
+                document.querySelector('#collections')?.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        new HeaderScroll();
+    });
+</script>

@@ -1,0 +1,12 @@
+
+<section class="banner-container">
+    <div class="banner-container-image-and-buton">
+        {% assign banner = settings['hero-banner'].settings.background_image %}
+        {% assign button_text = settings['hero-banner'].settings.button_text %}
+        {% assign button_link = settings['hero-banner'].settings.button_link %}
+        <img src="/assets/{{banner}}" class="banner-container-image" alt="Banner" width="auto" height="auto">
+        <a href="{{button_link}}" class="banner-container-buttonText">
+            {{button_text}}
+            </a>
+    </div>
+</section>

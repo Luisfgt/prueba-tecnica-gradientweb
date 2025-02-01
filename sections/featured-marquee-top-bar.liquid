@@ -1,0 +1,8 @@
+<div class="marquee">
+    <div class="marquee-container">
+        {% assign starIcon = settings.header.settings.star_icon %}
+        {% for i in (1..20) %}
+            {% render 'text-and-logo', text:"FREE SHIPPING FOR ORDERS OVER $100", logo:starIcon, class:"marquee-container" %}
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "featured-products": {
+      "type": "featured-products",
+      "settings": {
+        "heading": "Our Featured Products",
+        "background_color": "#ffffff",
+        "comprar": "Build Anything"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "cart": "CartLogo.svg",
+        "star_icon": "starIcon.svg",
+        "shuffle_logo_url": "LogoShuffle.png",
+        "store_logo_url": "STORE.svg",
+        "background_color": "#ffffff"
+      }
+    },
+    "hero-banner": {
+      "type": "hero-banner",
+      "settings": {
+        "button_text": "Shop Now",
+        "button_link": "/collections/all",
+        "marquee_text": "Free Shipping on Orders Over $50",
+        "background_image": "hero_banner_img.avif",
+        "star-icon-V2": "starIcon2.svg"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "logo_text": "MyShopify",
+        "links": [
+          { "label": "Home", "url": "/" },
+          { "label": "Cart", "url": "/cart" },
+          { "label": "All Products", "url": "/collections/all" },
+          { "label": "Collections", "url": "/collections" },
+          { "label": "Refund Policy", "url": "/refund-policy" },
+          { "label": "Privacy Policy", "url": "/privacy-policy" },
+          { "label": "Terms of Service", "url": "/terms-of-service" }
+        ]
+      }
+    }
+  }
+}
