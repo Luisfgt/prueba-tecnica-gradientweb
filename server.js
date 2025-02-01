@@ -36,7 +36,8 @@ app.get('/', (req, res) => {
     products, 
     collections, 
     stores,
-    settings: settings.sections
+    settings: settings.sections,
+    currentPath: req.path
   });
 });
 

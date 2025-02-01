@@ -1,0 +1,115 @@
+.featured-collections {
+    width: screen;
+    padding-inline: $global-padding-inline;
+    
+    .featured-collections-text-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 65px;
+        gap: 25px;
+        margin-bottom: 2rem;
+
+        .featured-collections-starIcon {
+            width: 65px;
+            height: 65px;
+        }
+
+        .featured-collections-title {
+            position: relative;
+            z-index: 10;
+            font-family: $font-family-qonquer-in-style;
+            font-size: 5.5rem;
+            color: white;
+        }
+
+        .featured-collections-text-container-pink-element {
+            @include flex-center;
+            filter: blur(1rem);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            width: screen;
+            height: fit-content;
+
+            .featured-collections-text-container-pink-element-color {
+                filter: blur(5rem);
+                border-radius: 100%;
+                background: $primary-color;
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+    }
+
+    .collections-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+
+        .collection-card {
+            transition: all 0.3s ease;
+
+            &.full-width {
+                grid-column: 1 / -1;
+            }
+
+            .collection-card-inner {
+                width: 100%;
+                height: 100%;
+                
+                &.version-2 {
+                    .collection-image-container {
+                        height: 468px;
+
+                        .collection-image {
+                            height: 100%;
+                        }
+
+                        .collection-title {
+
+                            
+                        }
+                    }
+                }
+
+                .collection-image-container {
+                    position: relative;
+                    width: 100%;
+                    height: 397px;
+                    overflow: hidden;
+                    border-radius: 8px;
+
+                    .collection-image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    .collection-title {
+                        position: absolute;
+                        bottom: 1rem;
+                        left: 1rem;
+                        color: white;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .collections-grid {
+        grid-template-columns: 1fr;
+        
+        .collection-card {
+            grid-column: 1 / -1;
+        }
+    }
+}

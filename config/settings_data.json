@@ -18,6 +18,12 @@
         "background_color": "#ffffff"
       }
     },
+    "collections": {
+      "type": "featured-collections",
+      "settings": {
+        "star-icon-V3": "starIcon3.svg"
+      }
+    },
     "hero-banner": {
       "type": "hero-banner",
       "settings": {
@@ -32,14 +38,15 @@
       "type": "footer",
       "settings": {
         "logo_text": "MyShopify",
+        "logo_name": "shuffleIsotipo.svg",
         "links": [
-          { "label": "Home", "url": "/" },
-          { "label": "Cart", "url": "/cart" },
-          { "label": "All Products", "url": "/collections/all" },
-          { "label": "Collections", "url": "/collections" },
-          { "label": "Refund Policy", "url": "/refund-policy" },
-          { "label": "Privacy Policy", "url": "/privacy-policy" },
-          { "label": "Terms of Service", "url": "/terms-of-service" }
+          { "label": "Home", "url": "/", "type": "principal" },
+          { "label": "Cart", "url": "/cart", "type": "principal" },
+          { "label": "All Products", "url": "/collections/all", "type": "principal" },
+          { "label": "Collections", "url": "/collections", "type": "principal" },
+          { "label": "Refund Policy", "url": "/refund-policy", "type": "secundary" },
+          { "label": "Privacy Policy", "url": "/privacy-policy", "type": "secundary" },
+          { "label": "Terms of Service", "url": "/terms-of-service", "type": "secundary" }
         ]
       }
     }

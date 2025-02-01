@@ -1,0 +1,47 @@
+<section class="featured-footer">
+    <div class="featured-footer-container-one">
+        <div class="featured-footer-container-one-logoContainer">
+            {% assign isotipo = settings.footer.settings.logo_name %}
+            <img src="/assets/SVG/{{isotipo}}" alt="" class="featured-footer-container-one-logo" width="auto" height="auto">
+            <div class="featured-footer-container-one-divisor-and-text">
+                <div class="featured-footer-container-one-divisor"></div>
+                <h1 class="featured-footer-container-one-text-logo">texto del logo</h1>
+            </div>
+        </div>
+        <p class="featured-footer-container-one-paragraph">
+            © 2024, Shuffle.store Operated by Studio Plaid. Need help?
+            Email support@shuffie.store
+        </p>
+    </div>
+    <div class="featured-footer-container-two">
+        {% assign links = settings.footer.settings.links %}
+        <div class="featured-footer-container-two-primary-links">
+            {% for link in links %}
+                {% if link.type == 'principal' %}
+                    <a href="{{link.url}}" class="featured-footer-container-two-primary-link {% if link.url == currentPath %}inPage{% endif %}">{{link.label | upcase}}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="featured-footer-container-two-secundary-links">
+            {% for link in links %}
+                {% if link.type == 'secundary' %}
+                    <a href="{{link.url}}" class="featured-footer-container-two-secundary-link">{{link.label | upcase}}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="featured-footer-container-two-crypto-links">
+            <p class="featured-footer-container-two-crypto-links-paragraph">
+                We accept all major cards, Paypal & crypto
+            </p>
+            <div class="featured-footer-container-two-crypto-links-logos">logos cryptos</div>
+        </div>
+    </div>
+    <div class="featured-footer-container-three">
+        <div class="featured-footer-container-three-container">
+            <p class="featured-footer-container-three-container-paragraph">Suscribe and receive drop notifications</p>
+        </div>
+        <div class="featured-footer-container-three-rrss">
+            links de redes
+        </div>
+    </div>
+</section>
