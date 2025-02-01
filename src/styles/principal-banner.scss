@@ -1,7 +1,32 @@
 $font-family-qonquer-in-style: 'Qonquer', sans-serif;
 $banner-text-size: 31px;
 
+@mixin buttonStyle {
+    all: initial;
+    color: white;
+    min-height: 72px;
+    max-height: 72px;
+    font-size: $banner-text-size;
+    display: flex;
+    background: $primary-color;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    padding-inline: 43px;
+    width: fit-content;
+    height: fit-content;
+    font-family: $font-family-qonquer-in-style;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
+    &:hover {
+        background: white;
+        color: $primary-color;
+    }
+}
 
 .banner-container {
     position: relative;
@@ -10,7 +35,7 @@ $banner-text-size: 31px;
     height: 594px;
     overflow: hidden;
     padding-inline: $global-padding-inline;
-    
+
     .banner-container-image-and-buton {
         position: relative;
         width: 100%;
@@ -26,30 +51,7 @@ $banner-text-size: 31px;
 
 
         .banner-container-buttonText {
-            all: initial;
-            color: white;
-            min-height: 72px;
-            max-height: 72px;
-            font-size: $banner-text-size;
-            display: flex;
-            background: $primary-color;
-            justify-content: center;
-            align-items: center;
-            border-radius: 5px;
-            position: absolute;
-            bottom: 32px;
-            left: 32px;
-            padding-inline: 43px;
-            width: fit-content;
-            height: fit-content;
-            font-family: $font-family-qonquer-in-style;
-            cursor: pointer;
-            transition: all 0.3s ease;
-
-            &:hover {
-                background: white;
-                color: $primary-color;
-            }
+            @include buttonStyle;
         }
     }
 

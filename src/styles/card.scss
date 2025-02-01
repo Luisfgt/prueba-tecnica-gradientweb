@@ -1,10 +1,29 @@
 $gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) border-box;
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-start {
+    display: flex;
+    justify-content: start;    
+    align-items: center;
+}
+
 
 .product-card {
     width: fit-content;
+    margin-bottom: 1rem;
+    &.hidden {
+        display: none;
+    }
+    &.showing {
+        animation: fadeIn 0.5s ease forwards;
+    }
 
     .product-card_imageContainer {
-        width: 327px;
+        width: 320px;
         height: 412px;
         background:
             $gradient-Card,
@@ -41,10 +60,8 @@ $gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) bo
             flex-direction: column;
 
             .product-card_info_and_button_info_container {
-                display: flex;
+                @include flex-center-start;
                 position: relative;
-                align-items: center;
-                justify-content: start;
                 overflow: hidden;
                 width: 17rem;
                 height: 21px;
@@ -91,10 +108,8 @@ $gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) bo
 
         .product-card_info_and_button_button {
             all: initial;
+            @include flex-center;
             margin-top: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             border-radius: 10rem;
             background: $primary-color;
             width: 49px;
@@ -103,4 +118,15 @@ $gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) bo
         }
     }
 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

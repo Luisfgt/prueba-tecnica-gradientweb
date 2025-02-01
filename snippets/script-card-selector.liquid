@@ -1,17 +1,31 @@
 <script>
 class CardScripts {
     constructor() {
+        this.currentGroup= 0;
+        this.itemsPerGroup = 4;
+        this.isLoading = false;
+        this.allShow = false;
         this.init();
     }
 
     init() {
         const cards = document.querySelectorAll('.product-card');
         
+        this.buttonViewAll = document.querySelector('.featured-products-button');
+        this.scrollObserver = document.querySelector('.scroll-observer');
+        this.hiddenProducts = document.querySelectorAll(' .product-card.hidden');
+        if(this.buttonViewAll) {
+            this.buttonViewAll.addEventListener('click', () => {
+                this.buttonViewAll.style.display = 'none';
+                this.initInfiniteScroll();
+            });
+        }
+
         cards.forEach(card => {
             const imageContainer = card.querySelector('.product-card_imageContainer');
             const title = card.querySelector('.product-card_info_and_button_info_container_title_one');
             const title2 = card.querySelector('.product-card_info_and_button_info_container_title_two');
-
+            
             imageContainer.addEventListener('mouseenter', () => {
                 title.classList.add('hoverCard');
                 title2.classList.add('hoverCard2');
@@ -23,9 +37,58 @@ class CardScripts {
             });
         });
     }
+
+    initInfiniteScroll() {
+    
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting && !this.isLoading && !this.allShown) { // Corregido isIntersection a isIntersecting
+                    this.loadNextGroup();
+                }
+            });
+        }, options); // options va aquí
+        if(this.scrollObserver) {
+            observer.observe(this.scrollObserver);
+        }
+        
+    }
+
+    loadNextGroup() {
+        this.isLoading = true;
+        const startIndex = this.currentGroup * this.itemsPerGroup;
+        const endIndex = startIndex + this.itemsPerGroup;
+        let showInThisGroup = 0;
+
+        this.hiddenProducts.forEach((product, index) => {
+            if(index >= startIndex && index < endIndex) { 
+                setTimeout(() => {
+                    product.classList.remove('hidden');
+                    product.classList.add('showing');
+                    showInThisGroup++;
+
+                    if(showInThisGroup === this.itemsPerGroup) {
+                        this.isLoading = false;
+                    }
+
+                    if(index === this.hiddenProducts.length - 1) {
+                        this.allShown = true;
+                        this.scrollObserver.style.display = 'none';
+                    }
+                }, (index - startIndex) * 100);
+            }
+        });
+        this.currentGroup++;
+
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     new CardScripts();
-});
+}); 
 </script>
