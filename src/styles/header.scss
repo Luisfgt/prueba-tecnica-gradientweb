@@ -116,6 +116,7 @@ $global-border-radius: 5px;
         min-width: 280px;
 
         .header_linksAndCart_links {
+            cursor: pointer;
             font-size: $header-links-text-size;
         }
 

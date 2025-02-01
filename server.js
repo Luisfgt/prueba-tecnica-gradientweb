@@ -26,9 +26,7 @@ const collections = require('./data/collections.json');
 const stores = require('./data/stores.json');
 const settings = JSON.parse(fs.readFileSync('./config/settings_data.json', 'utf-8'));
 const assetsPath = path.join(__dirname, 'assets');
-console.log('Assets path:', assetsPath);
 
-console.log(settings.sections.header.settings.store_logo_url);
 
 
 app.get('/', (req, res) => {
