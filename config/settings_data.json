@@ -39,6 +39,7 @@
       "settings": {
         "logo_text": "MyShopify",
         "logo_name": "shuffleIsotipo.svg",
+        "arrow_icon": "arrowIcon.svg",
         "links": [
           { "label": "Home", "url": "/", "type": "principal" },
           { "label": "Cart", "url": "/cart", "type": "principal" },
@@ -46,7 +47,10 @@
           { "label": "Collections", "url": "/collections", "type": "principal" },
           { "label": "Refund Policy", "url": "/refund-policy", "type": "secundary" },
           { "label": "Privacy Policy", "url": "/privacy-policy", "type": "secundary" },
-          { "label": "Terms of Service", "url": "/terms-of-service", "type": "secundary" }
+          { "label": "Terms of Service", "url": "/terms-of-service", "type": "secundary" },
+          { "label": "FACEBOOK", "url": "/terms-of-service", "type": "rrss" },
+          { "label": "X(TWITTER)", "url": "/terms-of-service", "type": "rrss" },
+          { "label": "INSTAGRAM", "url": "/terms-of-service", "type": "rrss" }
         ]
       }
     }

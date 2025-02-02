@@ -30,7 +30,7 @@ $font-size-principal-link: 17px;
         display: flex;
         flex-direction: column;
         width: fit-content;
-        gap: 52px;
+        gap: 39px;
 
         .featured-footer-container-one-logoContainer {
 
@@ -113,22 +113,77 @@ $font-size-principal-link: 17px;
         .featured-footer-container-two-crypto-links {
             @include full-flex-center();
             gap: 7px;
-
+            
             .featured-footer-container-two-crypto-links-paragraph {
                 @include paragraphStyle;
             }
 
-            .featured-footer-container-two-crypto-links-logos {}
+            .featured-footer-container-two-crypto-links-logos {
+                @include bodyLogos();
+        
+                .featured-footer-container-two-crypto-logo {
+                    @include logoCrypto();
+                }
+        
+                .featured-footer-container-two-crypto-link {
+                    @include bodyLinks();
+                }
+            }
         }
     }
 
     .featured-footer-container-three {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
         .featured-footer-container-three-container {
             .featured-footer-container-three-container-paragraph {
                 @include paragraphStyle;
             }
+            .featured-footer-container-three-input-container{
+                @include flex-center;
+                height: 38px;
+
+                background: #201E23;
+                .featured-footer-container-three-input {
+                    width: 100%;
+                    height: 100%;
+                    background: transparent;
+                    outline: none;
+                    border: none;
+                    color: white;
+                    padding-inline: 17px;
+
+                    &::placeholder {
+                        color: #808692
+                    }
+                }
+                .featured-footer-container-three-button{
+                    display: flex;
+                    padding: 0;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    width: fit-content;
+                    height: 100%;
+                    margin-inline: 17px;
+                    cursor: pointer;
+                    
+                }
+            }
         }
 
-        .featured-footer-container-three-rrss {}
+        .featured-footer-container-three-rrss {
+            @include full-flex-center();
+            margin-top: 41px;
+            margin-bottom: 69px;
+            gap: 10px;
+
+            .featured-footer-container-three-rrss-link {
+                @include paragraphStyle;
+            }
+        }
     }
 }
