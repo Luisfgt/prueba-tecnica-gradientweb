@@ -1,0 +1,26 @@
+.error-page{
+    @include flex-center;
+    height: 80vh;
+    width: screen;
+    flex-direction: column;
+    gap: 4rem;
+
+    .error-page_logo_container {
+        @include flex-center;
+        width: 100%;
+        height: fit-content;
+
+        .error-page_logo{
+            display: flex;
+            height: 30rem;
+        }
+    }
+
+    .error-page-button{
+        @include buttonStyle;
+        position: relative;
+        white-space: nowrap;
+        bottom: 0;
+        left: 0;
+    }
+}

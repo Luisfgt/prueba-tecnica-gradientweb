@@ -5,7 +5,8 @@
             <img src="/assets/SVG/{{isotipo}}" alt="" class="featured-footer-container-one-logo" width="auto" height="auto">
             <div class="featured-footer-container-one-divisor-and-text">
                 <div class="featured-footer-container-one-divisor"></div>
-                <h1 class="featured-footer-container-one-text-logo">texto del logo</h1>
+                {% assign logo_text = settings.footer.settings.logo_text %}
+                <h1 class="featured-footer-container-one-text-logo">{{logo_text}}</h1>
             </div>
         </div>
         <p class="featured-footer-container-one-paragraph">
@@ -46,7 +47,7 @@
         <div class="featured-footer-container-three-container">
             <p class="featured-footer-container-three-container-paragraph">Suscribe and receive drop notifications</p>
             <div class="featured-footer-container-three-input-container">
-                <input placeholder="Enter Email" type="text" name="" id="" class="featured-footer-container-three-input">
+                <input maxlength="300" placeholder="Enter Email" type="text" name="" id="" class="featured-footer-container-three-input">
                 <button class="featured-footer-container-three-button">
                     {% assign arrow_icon = settings.footer.settings.arrow_icon %}
                     <img src="/assets/SVG/{{ arrow_icon }}" height="16px" width="auto" alt="Logo" class="featured-footer-container-three-button-icon">
