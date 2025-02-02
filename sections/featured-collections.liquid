@@ -1,0 +1,35 @@
+<section class="featured-collections">
+    <div class="featured-collections-text-container">
+        {% assign star_icon_3 = settings["collections"].settings.star-icon-V3 %}
+        <img src="/assets/SVG/{{star_icon_3}}" alt="" width="auto" height="auto" class="featured-collections-starIcon">
+        <h2 class="featured-collections-title">LATEST COLLECTION</h2>
+        <img src="/assets/SVG/{{star_icon_3}}" alt="" width="auto" height="auto" class="featured-collections-starIcon">
+        <div class="featured-collections-text-container-pink-element">
+            <div class="featured-collections-text-container-pink-element-color">
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="collections-grid">
+        {% assign target_date = '2025-01-01' | date: '%s' | plus: 0 %}
+        {% for collection in collections %}
+            {% assign collection_date = collection.created_at | date: '%s' | plus: 0 %}
+            {% if collection_date >= target_date %}
+                {% assign remainder = forloop.index | modulo: 3 %}
+                {% assign version = 1 %}
+                {% if remainder == 0 %}
+                    {% assign version = 2 %}
+                {% endif %}
+                
+                <div class="collection-card {% if remainder == 0 %}full-width{% endif %}">
+                    {% render 'collections-cards', 
+                        version: version,
+                        image: collection.image, 
+                        title: collection.title 
+                    %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

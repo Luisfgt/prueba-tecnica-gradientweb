@@ -5,18 +5,18 @@
     },
     {
         "image": "https://res.cloudinary.com/djpzwxfqq/image/upload/v1738284615/Etherium_ca6kik.svg",
-        "coinPage": "https://bitcoin.org/es/"
+        "coinPage": "https://ethereum.org/es/"
     },
     {
         "image": "https://res.cloudinary.com/djpzwxfqq/image/upload/v1738284615/LiteCoin_rocb25.svg",
-        "coinPage": "https://bitcoin.org/es/"
+        "coinPage": "https://litecoin.org/es/"
     },
     {
         "image": "https://res.cloudinary.com/djpzwxfqq/image/upload/v1738284615/Dogecoin_blamfd.svg",
-        "coinPage": "https://bitcoin.org/es/"
+        "coinPage": "https://dogecoin.org/es/"
     },
     {
         "image": "https://res.cloudinary.com/djpzwxfqq/image/upload/v1738284615/USDCoin_sppt7d.svg",
-        "coinPage": "https://bitcoin.org/es/"
+        "coinPage": "https://latam.usdc.com/es-la/"
     }
 ]
