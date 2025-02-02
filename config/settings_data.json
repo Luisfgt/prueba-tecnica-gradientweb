@@ -34,6 +34,7 @@
         "star-icon-V2": "starIcon2.svg"
       }
     },
+    
     "footer": {
       "type": "footer",
       "settings": {
@@ -52,6 +53,12 @@
           { "label": "X(TWITTER)", "url": "/terms-of-service", "type": "rrss" },
           { "label": "INSTAGRAM", "url": "/terms-of-service", "type": "rrss" }
         ]
+      }
+    },
+    "error": {
+      "type": "error",
+      "settings": {
+        "error_icon": "underConstruction.svg"
       }
     }
   }
