@@ -1,23 +1,17 @@
-$gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) border-box;
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin flex-center-start {
-    display: flex;
-    justify-content: start;    
-    align-items: center;
-}
-
+$card-links-text-size-responsive: 10px;
 
 .product-card {
     width: fit-content;
     margin-bottom: 1rem;
+
     &.hidden {
         display: none;
+
+        @include responsive(lg) {
+            display: block;
+        }
     }
+
     &.showing {
         animation: fadeIn 0.5s ease forwards;
     }
@@ -32,6 +26,10 @@ $gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) bo
         overflow: hidden;
         border-radius: $global-border-radius;
 
+        @include responsive(md) {
+            width: 226px;
+            height: 276px;
+        }
 
         .product-card_imageContainer_image {
             width: 100%;
@@ -65,6 +63,10 @@ $gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) bo
                 overflow: hidden;
                 width: 17rem;
                 height: 21px;
+                
+                @include responsive(lg) {
+                    width: fit-content;
+                }
 
                 .product-card_info_and_button_info_container_title_one {
                     margin: 0;
@@ -77,6 +79,13 @@ $gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) bo
                     &.hoverCard {
                         transform: translateY(-1.3rem);
                     }
+
+                    @include responsive(md) {
+                        font-size: $card-links-text-size-responsive;
+
+                    }
+
+
                 }
 
                 .product-card_info_and_button_info_container_title_two {
@@ -91,9 +100,13 @@ $gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) bo
                     transition: all 0.3s ease;
                     max-height: 21px;
                     transform: translateY(1.1rem);
-                    
+
                     &.hoverCard2 {
                         transform: translateY(-0.2rem);
+                    }
+
+                    @include responsive(md) {
+                        font-size: $card-links-text-size-responsive;
                     }
                 }
             }
@@ -103,6 +116,9 @@ $gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) bo
                 font-size: $header-links-text-size;
                 font-weight: lighter;
                 color: white;
+                @include responsive(md) {
+                    font-size: $card-links-text-size-responsive;
+                }
             }
         }
 
@@ -125,6 +141,7 @@ $gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) bo
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

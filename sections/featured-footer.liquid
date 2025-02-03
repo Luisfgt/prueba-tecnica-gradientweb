@@ -55,11 +55,28 @@
             </div>
         </div>
         <div class="featured-footer-container-three-rrss">
-            {% for link in links %}
-                {% if link.type == 'rrss' %}
-                    <a href="{{link.url}}" class="featured-footer-container-three-rrss-link">{{link.label | upcase}}</a>
-                {% endif %}
-            {% endfor %}
+            <div class="featured-footer-container-three-rrss-links">
+                {% for link in links %}
+                    {% if link.type == 'rrss' %}
+                        <a href="{{link.url}}" class="featured-footer-container-three-rrss-link">{{link.label | upcase}}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="featured-footer-container-one-v2">
+                <div class="featured-footer-container-one-logoContainer">
+                    {% assign isotipo = settings.footer.settings.logo_name %}
+                    <img src="/assets/SVG/{{isotipo}}" alt="" class="featured-footer-container-one-logo" width="auto" height="auto">
+                    <div class="featured-footer-container-one-divisor-and-text">
+                        <div class="featured-footer-container-one-divisor"></div>
+                        {% assign logo_text = settings.footer.settings.logo_text %}
+                        <h1 class="featured-footer-container-one-text-logo">{{logo_text}}</h1>
+                    </div>
+                </div>
+            </div>
         </div>
+                <p class="featured-footer-container-one-paragraph">
+                    © 2024, Shuffle.store Operated by Studio Plaid. Need help?
+                    Email support@shuffie.store
+                </p>
     </div>
 </section>

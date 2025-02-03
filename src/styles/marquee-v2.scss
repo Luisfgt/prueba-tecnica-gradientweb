@@ -27,11 +27,13 @@ $marquee-hero-banner-text-size: 75px;
         }
         
         &::before {
+            max-height: 87px;
             left: 0;
             background: linear-gradient(to right, $colorBackground 0%, transparent 100%);
         }
         
         &::after {
+            max-height: 87px;
             right: 0;
             background: linear-gradient(to left, $colorBackground 0%, transparent 100%);
         }

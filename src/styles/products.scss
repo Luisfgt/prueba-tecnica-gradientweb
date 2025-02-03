@@ -6,13 +6,30 @@
     padding-inline: $global-padding-inline;
     gap: 3rem;
 
+    @include responsive(xxl) {
+        padding-inline: $global-padding-inline-xxl;
+    }
+
+    @include responsive(xl) {
+        padding-inline: $global-padding-inline-xl;
+    }
+
+    @include responsive(lg) {
+        padding-inline: $global-padding-inline-lg;
+    }
+
     .product-list {
         display: grid;
         gap: 14px;
-        grid-template-columns: repeat(4, 1fr);
         width: 100%;
         margin: 0 auto;
-
+        overflow-x: scroll;
+        grid-template-columns: repeat(4, 1fr);
+        
+        @include responsive(lg) {
+            grid-template-columns: repeat(auto-fit, minMax(250px, 1fr));
+            grid-auto-flow: column;
+        }
 
     }
 
@@ -28,6 +45,10 @@
             right: 0;
             bottom: 0;
             position: relative;
+
+            @include responsive(md) {
+                display: none;
+            }
         }
     }
 

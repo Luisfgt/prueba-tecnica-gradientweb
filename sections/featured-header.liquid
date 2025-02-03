@@ -1,10 +1,30 @@
 <header class="header">
-    <section onclick="location.href='/'" class="header_logoContainer">
+    <section class="header-modal-responsive">
+        <a class="header-modal-responsive_links">All Products</a>
+        <a class="header-modal-responsive_links">Collections</a>
+        <div class="header-modal-responsive_midContainer">
+            We accept:
+            <div class="header-modal-responsive_logoContainer">
+                {% for store in stores %}
+                    <a href="{{store.coinPage}}" target="_blank" class="header-modal-responsive_link">
+                        <img src="{{ store.image }}" height="auto" width="auto" alt="Logo" class="header-modal-responsive_logo">
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="header_logoContainer">
         {%  assign header_store_logo = settings.header.settings.store_logo_url %} 
         {%  assign header_shuffle_logo = settings.header.settings.shuffle_logo_url %} 
-        <img src="/assets/SVG/{{ header_shuffle_logo }}" height="auto" width="180" alt="Logo" class="header_logoContainer_logo1">
+        {%  assign header_shuffle_logo_responsive = settings.header.settings.logo_name %} 
+        <div class="header_logoContaine_burger">
+            <div class="header_logoContaine_burger_line"></div>
+            <div class="header_logoContaine_burger_line2"></div>
+        </div>
+        <img onclick="location.href='/'" src="/assets/SVG/{{ header_shuffle_logo }}" height="auto" width="180" alt="Logo" class="header_logoContainer_logo1">
+        <img onclick="location.href='/'" src="/assets/SVG/{{ header_shuffle_logo_responsive }}" height="auto" width="auto" alt="Logo" class="header_logoContainer_responsive">
         <div class="header_divisorLine"></div>
-        <img src="/assets/SVG/{{header_store_logo}}"  height="22" width="auto" alt="Logo" class="header_logoContainer_logo2">
+        <img src="/assets/SVG/{{header_store_logo}}"  height="auto" width="auto" alt="Logo" class="header_logoContainer_logo2">
     </section>
     <section class="header_midContainer">
         <div class="header_midContainer_logos">
@@ -27,3 +47,4 @@
         </div>
     </section>
 </header>
+
