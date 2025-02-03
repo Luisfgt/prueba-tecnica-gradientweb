@@ -10,6 +10,9 @@ Bienvenido a la documentación del simulador de Shopify. Este proyecto es mi apl
 
 - Hasta ahora estoy documentando el proyecto y también subiendo las ramas, me centré tanto en aprender y entender liquid, BEM y SASS que olvidé comitear, un error que empecé a corregir justo al momento de terminar el segundo marquee.
 
+- Si ves que las ilustraciones no tienen una precisión del 100% con los de la imagen, cabe recalcar es que la mayoría las repliqué en Illustrator, y las exporté como SVG, para poder utilizarlas en este proyecto, por lo que es posible que algunos elementos no sean tan precisos como el original a falta de tiempo, este proyecto fue realizado en 3 días.
+
+- No olvides de probar todos los botones, la mayoría tienen funcionalidad.
 
 ---
 
@@ -61,6 +64,18 @@ Ejemplo:
 </section>
 ```
 
+### ***Componentes Grandes***
+
+Tenemos los componentes que se están renderizando en los templates, en los snippets tenemos componentes más pequeños y también scripts.
+
+### ***Scripts***
+
+Utilizamos en total dos scripts que contienen la manipulación del scroll y de abrir o cerrar el modal del navbar. Estamos utilizando clases para una mejor organización y reutilización de las funcionalidades.
+
+En el script "card-selector", tenemos la funcionalidad del hover de las cards, para poder mostrar u ocultar las tags de los productos y también de cuando le damos al botón "View All" a medida que vamos scrolleando se muestren las "cards", para ello tenemos un "observer" del scroll, que cuando muestra un porcentaje de scroll se cambian los estilos de las cards ocultas a "shiowing".
+
+En el script "header-change", tenemos la funcionalidad del scroll del navbar, y del modal que se activa con la hamburguesa, además de manipular algunos estilos para evitar que se pueda hacer scroll cuando está abierto, y para activar las funcionalidades de "scroll to" de "All products y Collections".
+
 ### **Hojas de estilo**
 
 Las hojas de estilo se encuentran en la carpeta `styles`, dentro de la carpeta `src`, importando la hoja de estilo principal llamada `global.scss` en el archivo app.js.
@@ -69,7 +84,7 @@ Dentro del archivo global.scss se encuentran los estilos globales, además de im
 
 ### **Snippets**
 
-Los Snuippets son componentes reutilizables, como un card de producto. Puedes incluir un snippet utilizando la etiqueta `{% render %}`:
+Los Snippets son componentes reutilizables, como un card de producto. Puedes incluir un snippet utilizando la etiqueta `{% render %}`:
 
 Ejemplo:
 
@@ -118,8 +133,7 @@ El esquema define los ajustes disponibles para una sección. Mientras es necesar
 
 ### **Data (`settings_data.json`)**
 
-Este archivo contiene los valores dinámicos para los ajustes
-
+Este archivo contiene los valores dinámicos para los ajustes, en este caso use utilizó para poder cambiar muchos textos importantes dentro de la aplicación, tanto de los links como de los textos, además de tener las referencias a las imágenes utilizadas.
 
 ---
 

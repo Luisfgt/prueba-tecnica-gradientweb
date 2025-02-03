@@ -1,7 +1,19 @@
 .featured-collections {
     width: screen;
     padding-inline: $global-padding-inline;
-    
+
+    @include responsive(xxl) {
+        padding-inline: $global-padding-inline-xxl;
+    }
+
+    @include responsive(xl) {
+        padding-inline: $global-padding-inline-xl;
+    }
+
+    @include responsive(lg) {
+        padding-inline: $global-padding-inline-lg;
+    }
+
     .featured-collections-text-container {
         display: flex;
         align-items: center;
@@ -11,9 +23,29 @@
         gap: 25px;
         margin-bottom: 2rem;
 
-        .featured-collections-starIcon {
+        @include responsive(md) {
+            margin-bottom: 4rem;
+        }
+
+        .featured-collections-starIcon-left {
             width: 65px;
             height: 65px;
+
+            @include responsive(sm) {
+                width: 50px;
+                height: 50px;
+                transform: translate(2rem, -1.5rem);
+            }
+        }
+        .featured-collections-starIcon-right {
+            width: 65px;
+            height: 65px;
+
+            @include responsive(sm) {
+                width: 50px;
+                height: 50px;
+                transform: translate(-2rem, -1.5rem);
+            }
         }
 
         .featured-collections-title {
@@ -22,6 +54,16 @@
             font-family: $font-family-qonquer-in-style;
             font-size: 5.5rem;
             color: white;
+
+            @include responsive(md) {
+                font-size: 50px;
+                text-align: center;
+            }
+
+            @include responsive(lg) {
+                font-size: 70px;
+                text-align: center;
+            }
         }
 
         .featured-collections-text-container-pink-element {
@@ -52,6 +94,11 @@
         max-width: 100%;
         margin: 0 auto;
 
+        @include responsive(md) {
+            grid-template-columns: 1fr;
+
+        }
+
         .collection-card {
             transition: all 0.3s ease;
 
@@ -59,10 +106,15 @@
                 grid-column: 1 / -1;
             }
 
+            @include responsive(md) {
+                grid-column: 1 / -1;
+
+            }
+
             .collection-card-inner {
                 width: 100%;
                 height: 100%;
-                
+
                 &.version-2 {
                     .collection-image-container {
                         height: 468px;
@@ -71,8 +123,7 @@
                             height: 100%;
                         }
 
-                        .collection-title {
-                        }
+                        .collection-title {}
                     }
                 }
 
@@ -91,7 +142,7 @@
                         right: 0;
                         width: 120%;
                         height: 30%;
-                        background: linear-gradient(0deg, #070707 0%, rgba(7, 7, 7, 0) 100%);   
+                        background: linear-gradient(0deg, #070707 0%, rgba(7, 7, 7, 0) 100%);
                         z-index: 1;
                         pointer-events: none;
                     }
@@ -117,16 +168,6 @@
                     }
                 }
             }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .collections-grid {
-        grid-template-columns: 1fr;
-        
-        .collection-card {
-            grid-column: 1 / -1;
         }
     }
 }

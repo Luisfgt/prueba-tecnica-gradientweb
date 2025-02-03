@@ -1,0 +1,28 @@
+@mixin responsive($size) {
+    @if $size == sm {
+        @media (max-width: 640px) {
+            @content;
+        }
+    }
+    @if $size == md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @if $size == lg {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+    @if $size == xl {
+        @media (max-width: 1284px) {
+            @content;
+        }
+    }
+    @if $size == xxl {
+        @media (max-width: 1536px) {
+            @content;
+        }
+    }
+    
+}
