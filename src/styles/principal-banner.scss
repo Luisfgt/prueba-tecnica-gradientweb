@@ -35,6 +35,19 @@ $banner-text-size: 31px;
     height: 594px;
     overflow: hidden;
     padding-inline: $global-padding-inline;
+    
+    @include responsive(xxl) {
+        padding-inline: $global-padding-inline-xxl;
+    }
+    
+    @include responsive(xl) {
+        padding-inline: $global-padding-inline-xl;
+    }
+    
+    @include responsive(lg) {
+        height: 532px;
+        padding-inline: $global-padding-inline-lg;
+    }
 
     .banner-container-image-and-buton {
         position: relative;

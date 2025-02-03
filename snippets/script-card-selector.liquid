@@ -48,11 +48,11 @@ class CardScripts {
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if(entry.isIntersecting && !this.isLoading && !this.allShown) { // Corregido isIntersection a isIntersecting
+                if(entry.isIntersecting && !this.isLoading && !this.allShown) {
                     this.loadNextGroup();
                 }
             });
-        }, options); // options va aquí
+        }, options);
         if(this.scrollObserver) {
             observer.observe(this.scrollObserver);
         }

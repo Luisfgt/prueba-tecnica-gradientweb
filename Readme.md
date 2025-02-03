@@ -10,7 +10,9 @@ Bienvenido a la documentación del simulador de Shopify. Este proyecto es mi apl
 
 - No olvides de probar todos los botones, la mayoría tienen funcionalidad.
 
+
 - Si ven que en los commits aparece el nombre de una chica, es porque se mezcló mi nombre con la cuenta de GitHub de ella en local, a pesar de que cambié los nombres en el "global" del vsc, esto sucedió por poner git config --global user.username en vez de user.name, en todo momento fueron míos (Es mi novia y utilicé su mac para realizar este proyecto) y no vuelvo hacer todos los commits y pr nuevamente porque perdería como "la prueba" de que estuve subiendo los commits y haciendo los pr a medida que hacía el proyecto. Me excusan por la confusión. Igualmente el último commit lo hice con mi cuenta para demostrar que era yo.
+
 
 ---
 

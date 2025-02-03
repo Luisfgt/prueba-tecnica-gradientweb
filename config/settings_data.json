@@ -15,7 +15,8 @@
         "star_icon": "starIcon.svg",
         "shuffle_logo_url": "LogoShuffle.png",
         "store_logo_url": "STORE.svg",
-        "background_color": "#ffffff"
+        "background_color": "#ffffff",
+        "logo_name": "shuffleIsotipo.svg"
       }
     },
     "collections": {

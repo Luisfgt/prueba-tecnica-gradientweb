@@ -1,3 +1,24 @@
+$src-path-qonquer: url('../../assets/qonquer/Qonquer.ttf');
+$font-family-qonquer: 'Qonquer';
+$font-family-qonquer-in-style: 'Qonquer', sans-serif;
+$gradient-Card: linear-gradient(90deg, #3B265F 0%, #665B99 52%, #5246A1 100%) border-box;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-start {
+    display: flex;
+    justify-content: start;    
+    align-items: center;
+}
+
 @import 'header';
 @import 'marquee';
 @import 'principal-banner';
@@ -7,11 +28,8 @@
 @import 'collections';
 @import 'footer';
 @import '404';
+@import '_breakpoints';
 
-
-$src-path-qonquer: url('../../assets/qonquer/Qonquer.ttf');
-$font-family-qonquer: 'Qonquer';
-$font-family-qonquer-in-style: 'Qonquer', sans-serif;
 
 
 @font-face {
@@ -37,6 +55,7 @@ body {
   position: relative;
   background-color: #111;
   padding-top: 10rem;
+  overflow-x: hidden;
 
   &::after {
     content: "";

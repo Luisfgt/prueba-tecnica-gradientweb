@@ -35,7 +35,49 @@
         }
     }
 
+    class HeaderModal {
+        constructor() {
+            this.button = document.querySelector('.header_logoContaine_burger');
+            this.line1 = document.querySelector('.header_logoContaine_burger_line');
+            this.line2 = document.querySelector('.header_logoContaine_burger_line2');
+            this.logoResponsive = document.querySelector('.header_logoContainer_responsive');
+            this.divisorLine = document.querySelector('.header_divisorLine');
+            this.secundaryLogo = document.querySelector('.header_logoContainer_logo2');
+            this.body = document.querySelector('body');
+            this.modal = document.querySelector('.header-modal-responsive');
+            this.initFunctions();
+        }
+        initFunctions() {
+            this.button.addEventListener('click', () => this.toggleModal());
+            document.querySelectorAll('.header-modal-responsive_links').forEach(link => {
+                link.addEventListener('click', (e) => this.closeModalAndGoTo(e));
+            });
+        }
+
+        closeModalAndGoTo(e) {
+            const functionHeader = new HeaderScroll().handleLinkClick(e)
+            this.toggleModal();
+        }
+
+        toggleModal() {
+
+            //
+
+        const modalValidate = this.modal.classList.contains('open');
+        this.modal.classList.toggle('open');
+        this.line1.classList.toggle('openModal');
+        this.line2.classList.toggle('openModal');
+        this.logoResponsive.style.opacity = modalValidate ? '1' : '0';
+        this.divisorLine.style.opacity = modalValidate ? '1' : '0';
+        this.secundaryLogo.style.opacity = modalValidate ? '1' : '0'; 
+        this.body.style.overflow = this.modal.classList.contains('open') ? 'hidden' : 'auto';
+        }
+
+
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
         new HeaderScroll();
+        new HeaderModal();
     });
 </script>
