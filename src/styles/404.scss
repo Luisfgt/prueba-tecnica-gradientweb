@@ -13,6 +13,10 @@
         .error-page_logo{
             display: flex;
             height: 30rem;
+
+            @include responsive(sm) {
+                height: 80vw;
+            }
         }
     }
 
