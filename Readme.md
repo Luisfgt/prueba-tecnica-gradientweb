@@ -6,15 +6,11 @@ Bienvenido a la documentación del simulador de Shopify. Este proyecto es mi apl
 
 - En este proyecto mezclé algunos conceptos de la programación con el fin de entender cómo funciona liquid, además, poder mostrar diferentes formas de solucionar un mismo problema. Un ejemplo de esto podría ser el uso de la carpeta "data" para almacenar links de los logos subidos en una nube, en este caso cloudinary. Esto fue lo que primero se me ocurrió para una correcta optimización de las imágenes, así que si ves que algunos casos utilizo links de clodinary, y en otro uso referencias a los archivos ubicados en la carpeta "assets", es por este motivo.
 
-- Es importante aclarar que es la primera vez que utilizo SASS y BEM, a lo largo de mi carrera solo he utilizado tailwind y css puro, por lo que es posible que algunos conceptos no los aplique con la mejor práctica, pero eso no es un problema, ya que sé que con algunos días de uso, y leyendo código con SASS mejor aplicado, puedo mejorar.
-
-- Hasta ahora estoy documentando el proyecto y también subiendo las ramas, me centré tanto en aprender y entender liquid, BEM y SASS que olvidé comitear, un error que empecé a corregir justo al momento de terminar el segundo marquee.
-
 - Si ves que las ilustraciones no tienen una precisión del 100% con los de la imagen, cabe recalcar es que la mayoría las repliqué en Illustrator, y las exporté como SVG, para poder utilizarlas en este proyecto, por lo que es posible que algunos elementos no sean tan precisos como el original a falta de tiempo, este proyecto fue realizado en 3 días.
 
 - No olvides de probar todos los botones, la mayoría tienen funcionalidad.
 
-- Si ven que en los pr aparece el nombre de una chica, es porque se mezcló mi nombre con la cuenta de GitHub de ella en local, a pesar de que cambié los nombres en el "global" del vsc por poner git config --global user.username en vez de user.name, aparece como si los commits fuesen de ella, pero no es así, en todo momento fueron míos (Es mi novia y utilicé su mac para realizar este proyecto) y no vuelvo hacer todos los commits y pr nuevamente porque perdería como "la prueba" de que estuve subiendo los commits y haciendo los pr a medida que hacía el proyecto. Me excusan por la confusión. Igualmente el último commit lo hice con mi cuenta para demostrar que era yo.
+- Si ven que en los commits aparece el nombre de una chica, es porque se mezcló mi nombre con la cuenta de GitHub de ella en local, a pesar de que cambié los nombres en el "global" del vsc, esto sucedió por poner git config --global user.username en vez de user.name, en todo momento fueron míos (Es mi novia y utilicé su mac para realizar este proyecto) y no vuelvo hacer todos los commits y pr nuevamente porque perdería como "la prueba" de que estuve subiendo los commits y haciendo los pr a medida que hacía el proyecto. Me excusan por la confusión. Igualmente el último commit lo hice con mi cuenta para demostrar que era yo.
 
 ---
 
